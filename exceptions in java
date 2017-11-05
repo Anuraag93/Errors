@@ -1,0 +1,15 @@
+java.lang.stackoverflowerror 
+
+Check for any recusive calls for methods. Mainly it is caused when there is recursive call for a method. A simple example is
+public static void main(String... args) {
+    Main main = new Main();
+
+    main.testMethod(1);
+}
+
+public void testMethod(int i) {
+    testMethod(i);
+
+    System.out.println(i);
+}
+Here the System.out.println(i); will be repeatedly pushed to stack when the testMethod is called.
