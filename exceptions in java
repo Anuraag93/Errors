@@ -13,3 +13,5 @@ public void testMethod(int i) {
     System.out.println(i);
 }
 Here the System.out.println(i); will be repeatedly pushed to stack when the testMethod is called.
+Solution:
+for recursive calls we should provide an end statement to tell the computer to repeat only so many times.
